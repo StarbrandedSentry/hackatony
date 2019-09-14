@@ -12,6 +12,6 @@ export class ItemsService {
   itemCollection: AngularFirestoreCollection<Item>;
 
   constructor(public afs: AngularFirestore) { 
-
+    this.itemCollection = this.afs.collection('item', ref => ref.orderBy('name', 'asc'));
   }
 }
