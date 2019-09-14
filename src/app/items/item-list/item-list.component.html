@@ -4,7 +4,7 @@
             <span class="name">{{item.name}}</span>   
             <span class="desc">{{item.description}}</span>
         </div>        
-        <i class="material-icons">
+        <i class="material-icons" (click)="deleteItem(item.id)">
             delete_outline
         </i>
     </div>

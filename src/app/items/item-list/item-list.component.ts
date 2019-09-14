@@ -18,5 +18,9 @@ export class ItemListComponent implements OnInit {
         this.itemService.recoveredItems = items;
     });
   }
+  deleteItem(id:string){
+    this.itemService.deleteItem(id);
+    console.log(id);
+  }
 
 }

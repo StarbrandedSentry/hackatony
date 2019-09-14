@@ -30,5 +30,8 @@ export class ItemsService {
   addItem(item:Item){
     this.itemCollection.add(item);
   }
+  deleteItem(id:string){
+    this.itemCollection.doc(id).delete();
+  }
 
 }
