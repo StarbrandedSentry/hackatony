@@ -1,0 +1,20 @@
+.head
+{
+    text-align: left;
+}
+
+.item
+{
+    width: 100%;    
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-start;
+}
+.name
+{
+    color: var(--primary-dark);
+}
+.desc
+{
+    color: var(--secondary-dark);
+}

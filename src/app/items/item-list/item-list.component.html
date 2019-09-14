@@ -1,5 +1,10 @@
 <div class="container">
-    <div *ngFor="let item of itemService.recoveredItems">
-        {{item.name}}
+    <div class="head">
+        <span class="">NAME</span>
+        <span class="">DESCRIPTION</span>
+    </div>
+    <div *ngFor="let item of itemService.recoveredItems" class="item">      
+        <span class="name">{{item.name}}</span>   
+        <span class="desc">{{item.description}}</span> 
     </div>
 </div>
