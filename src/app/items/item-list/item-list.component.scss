@@ -1,9 +1,10 @@
-.item
+.item 
 {
     width: 100%;    
     display: flex;
     margin: 0.25em 0;
     align-items: center;
+    padding: 0.25em 1em;
     
     .details
     {
@@ -13,7 +14,19 @@
 
     i {
         cursor: pointer;
-        margin-left: auto;
+        margin-left: auto;        
+        color: var(--primary);
+    }
+
+    i:hover {
+        color: var(--primary-dark);
+    }
+}
+.item:nth-child(odd){
+    background-color: var(--primary-light);
+    margin: 0 -1em;
+    span, i {
+        color: #fff;
     }
 }
 .name
