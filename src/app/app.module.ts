@@ -3,10 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './layout/nav/nav.component';
+import { ItemsComponent } from './items/items.component';
+import { ItemAddComponent } from './items/item-add/item-add.component';
+import { ItemListComponent } from './items/item-list/item-list.component';
+import { HttpComponent } from './http/http.component';
+import { BurgerComponent } from './burger/burger.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    ItemsComponent,
+    ItemAddComponent,
+    ItemListComponent,
+    HttpComponent,
+    BurgerComponent
   ],
   imports: [
     BrowserModule,
