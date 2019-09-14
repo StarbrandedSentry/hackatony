@@ -1,7 +1,7 @@
 <div class="container uncentered">
     <span class="title">Name:</span>
-    <input type="text" placeholder="Enter Name:"> 
+    <input type="text" placeholder="Enter Name:" [(ngModel)]="item.name"> 
     <span class="title">Description:</span>
-    <input type="text" placeholder="Enter Description"> 
-    <button class="solid">ADD</button>
+    <input type="text" placeholder="Enter Description" [(ngModel)]="item.description"> 
+    <button class="solid" (click)="addItem()">ADD</button>
 </div>
