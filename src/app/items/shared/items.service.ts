@@ -26,4 +26,9 @@ export class ItemsService {
   getItems(){
     return this.items;
   }
+
+  addItem(item:Item){
+    this.itemCollection.add(item);
+  }
+
 }
