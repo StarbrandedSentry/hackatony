@@ -5,8 +5,15 @@
 
 }
 
-input{
+input[type="text"]{
+    background-color: transparent;
+    border:none;
+    border-bottom: 3px solid var(--primary);
     width: 100%;
+}
+
+input[type="text"]:focus{
+    border-bottom:  3px solid var(--secondary)
 }
 
 button
