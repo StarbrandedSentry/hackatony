@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Item } from '../models/item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService {
+  items: Observable<Item[]>;
+  itemCollection: AngularFirestoreCollection<Item>;
 
   constructor(public afs: AngularFirestore) { 
 
