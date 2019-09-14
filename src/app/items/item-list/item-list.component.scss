@@ -2,8 +2,19 @@
 {
     width: 100%;    
     display: flex;
-    flex-direction: column;
     margin: 0.25em 0;
+    align-items: center;
+    
+    .details
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    i {
+        cursor: pointer;
+        margin-left: auto;
+    }
 }
 .name
 {
