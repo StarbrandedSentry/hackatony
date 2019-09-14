@@ -29,3 +29,36 @@ body{
     align-items: center;
     margin: 1em;
 }
+
+button{
+    padding: 1em;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 0.3em;
+    border: none;
+    
+    &.solid{
+        color: #ffffff;
+        background-color: var(--primary);
+        transition-property: opacity;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in;
+
+        &:hover{
+            opacity: 0.75;
+        }
+
+        &:active{
+            background-color: var(--primary-light);
+        }
+    }
+}
+
+input{
+    &[type=text],&[type=password]{
+        padding: 0.50em;
+        font-size: 1em;
+        outline: none;
+        border-radius: 0.1em;
+    }
+}
