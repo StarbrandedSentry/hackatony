@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ItemAddComponent } from './items/item-add/item-add.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { HttpComponent } from './http/http.component';
 import { BurgerComponent } from './burger/burger.component';
+import { environment } from 'src/environments/environment.prod';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { BurgerComponent } from './burger/burger.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
