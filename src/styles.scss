@@ -69,3 +69,9 @@ input{
         box-sizing: border-box;
     }
 }
+
+@media (max-width: 620px) {
+    .container {
+        width: 80vw;
+    }
+}
