@@ -7,14 +7,11 @@
 {
     width: 100%;    
     display: flex;
-    justify-content: space-around;
-    align-self: flex-start;
+    flex-direction: column;
+    margin: 0.25em 0;
 }
 .name
 {
     color: var(--primary-dark);
-}
-.desc
-{
-    color: var(--secondary-dark);
+    font-weight: 600;
 }
