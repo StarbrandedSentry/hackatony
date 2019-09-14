@@ -11,6 +11,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     console.log('bobo si serdon');
+    console.log('joke lang masakit likod ni serdon');
   }
 
 }
