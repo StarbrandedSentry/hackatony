@@ -9,6 +9,7 @@ import { Item } from '../models/item.model';
 })
 export class ItemsService {
   items: Observable<Item[]>;
+  recoveredItems: Item[];
   itemCollection: AngularFirestoreCollection<Item>;
 
   constructor(public afs: AngularFirestore) { 

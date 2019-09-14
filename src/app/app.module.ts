@@ -13,6 +13,7 @@ import { HttpComponent } from './http/http.component';
 import { BurgerComponent } from './burger/burger.component';
 import { environment } from 'src/environments/environment.prod';
 
+import { ItemsService } from './items/shared/items.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { environment } from 'src/environments/environment.prod';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
