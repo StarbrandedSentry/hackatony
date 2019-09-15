@@ -13,7 +13,7 @@ export class ItemsService {
   itemCollection: AngularFirestoreCollection<Item>;
 
   constructor(public afs: AngularFirestore) { 
-    this.itemCollection = this.afs.collection('item', ref => ref.orderBy('name', 'asc'));
+    this.itemCollection = this.afs.collection('item', ref => ref.orderBy('date_added', 'asc'));
 
     this.items = this.itemCollection.snapshotChanges().pipe(map(actions => actions.map(a => {
       const data = a.payload.doc.data() as Item;

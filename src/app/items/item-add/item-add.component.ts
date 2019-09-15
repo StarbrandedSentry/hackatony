@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../models/item.model';
 import { ItemsService} from '../shared/items.service';
 
+
 @Component({
   selector: 'app-item-add',
   templateUrl: './item-add.component.html',
@@ -26,7 +27,12 @@ export class ItemAddComponent implements OnInit {
     if(!this.item.name || !this.item.description){
       return;
     }
+    
+    this.item.date_added = new Date();
     this.itemService.addItem(this.item);
+
+    this.item.name = '';
+    this.item.description = '';
   }
 
 }
