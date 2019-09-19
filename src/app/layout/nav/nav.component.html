@@ -1,6 +1,11 @@
 <nav>
+    <button class="menu">
+        <i class="material-icons" (click)="toggle()">
+                view_headline
+        </i>
+    </button>
     <h1>HACKATHONERS</h1>
-    <div class="nav-buttons">
+    <div class="nav-buttons" [@openClose]="isOpen ? 'open' : 'closed'">
         <a [routerLink]="[ '/items' ]" routerLinkActive="active">
             <i class="material-icons">
                 chrome_reader_mode
