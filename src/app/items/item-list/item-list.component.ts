@@ -23,4 +23,8 @@ export class ItemListComponent implements OnInit {
     console.log(id);
   }
 
+  showEdit(){
+    
+  }
+
 }

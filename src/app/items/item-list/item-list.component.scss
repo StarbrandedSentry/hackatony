@@ -23,6 +23,11 @@
         color: var(--primary-dark);
     }
 }
+
+.icons {
+    margin-left: auto;
+}
+
 .item:nth-child(odd){
     background-color: var(--primary);
     margin: 0 -1em;

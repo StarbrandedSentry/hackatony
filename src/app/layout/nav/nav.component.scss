@@ -75,7 +75,7 @@ h1{
     }
 
     .nav-buttons{
-        position: absolute;
+        position: fixed;
         background-color: var(--primary-dark);
         height: calc(100vh + (5vh + 2em));
         width: 40vw;

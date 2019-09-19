@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -30,7 +30,15 @@ import {
   ]
 })
 export class NavComponent implements OnInit {
-  
+  @HostListener('window:resize', ['$event'])
+    onResize(event) {
+    if(window.innerWidth <= 620){
+      this.isOpen = false;
+    }
+    else{
+      this.isOpen = true;
+    }
+  }
   isOpen = false;
 
   constructor() { }
