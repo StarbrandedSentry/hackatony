@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../models/item.model';
 import { ItemsService } from '../shared/items.service';
+import { MatDialog } from '@angular/material';
+import { ItemEditComponent } from '../dialogs/item-edit/item-edit.component';
 
 @Component({
   selector: 'app-item-list',
@@ -10,7 +12,7 @@ import { ItemsService } from '../shared/items.service';
 export class ItemListComponent implements OnInit {
   retard: string = 'SUNSHINE';
   items: Item[];
-  constructor(public itemService: ItemsService) { }
+  constructor(public itemService: ItemsService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.itemService.getItems()
@@ -24,7 +26,7 @@ export class ItemListComponent implements OnInit {
   }
 
   showEdit(){
-    
+    this.dialog.open(ItemEditComponent);
   }
 
 }

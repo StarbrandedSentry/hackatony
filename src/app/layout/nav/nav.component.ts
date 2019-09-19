@@ -39,7 +39,7 @@ export class NavComponent implements OnInit {
       this.isOpen = true;
     }
   }
-  isOpen = false;
+  isOpen = true;
 
   constructor() { }
 

@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
+import {MatDialogModule} from '@angular/material/dialog';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './layout/nav/nav.component';
@@ -16,6 +18,7 @@ import { BurgerComponent } from './burger/burger.component';
 import { environment } from 'src/environments/environment.prod';
 
 import { ItemsService } from './items/shared/items.service';
+import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +28,19 @@ import { ItemsService } from './items/shared/items.service';
     ItemAddComponent,
     ItemListComponent,
     HttpComponent,
-    BurgerComponent
+    BurgerComponent,
+    ItemEditComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [ItemsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ItemEditComponent]
 })
 export class AppModule { }

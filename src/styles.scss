@@ -8,6 +8,8 @@
     --secondary-dark: #12005e;
 }
 
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 body{
     background-color: #fcf5f5;
     margin: 0;
