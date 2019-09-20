@@ -11,8 +11,8 @@ import { ItemsService} from '../shared/items.service';
 export class ItemAddComponent implements OnInit {
   name: string;
   mess = {
-    message1: '',
-    message2: ''
+    message1: 'not valid',
+    message2: 'not valid'
   }
   description: string;
   item: Item = {
