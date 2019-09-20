@@ -23,6 +23,12 @@ export class ItemAddComponent implements OnInit {
   ngOnInit() {
   
   }
+  onKey(event: KeyboardEvent) { // with type info
+    if (event.key === "Enter") {
+    this.addItem();
+    }
+  }
+ 
   addItem(){
     if(!this.item.name || !this.item.description){
       return;
