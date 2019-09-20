@@ -1,9 +1,11 @@
 
 <div class="container uncentered">
     <span class="title">Name:</span>
-    <input type="text" (keyup)="onKey($event)" placeholder="Enter Name:" [(ngModel)]="item.name"> 
+    <input type="text" (click)="reset()" (keyup)="onKey($event)" placeholder="Enter Name:" [(ngModel)]="item.name"> 
+    <span class="message">message:{{msg}}</span>
     <span class="title">Description:</span>
-    <input type="text" (keyup)="onKey($event)" placeholder="Enter Description" [(ngModel)]="item.description"> 
+    <input type="text" (click)="reset()" (keyup)="onKey($event)" placeholder="Enter Description" [(ngModel)]="item.description"> 
+    <span class="message">message:{{msg1}}</span>
     <button class="solid" (click)="addItem()">ADD</button>
-
+  
 </div>  

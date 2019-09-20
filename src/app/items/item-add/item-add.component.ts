@@ -10,11 +10,16 @@ import { ItemsService} from '../shared/items.service';
 })
 export class ItemAddComponent implements OnInit {
   name: string;
+  mess = {
+    message1: '',
+    message2: ''
+  }
   description: string;
   item: Item = {
     name: '',
     description: ''
   }
+  letter:string ="=";
 
   constructor(public itemService:ItemsService) { 
     
@@ -23,10 +28,20 @@ export class ItemAddComponent implements OnInit {
   ngOnInit() {
   
   }
+  reset(){
+    this.letter="";
+  }
   onKey(event: KeyboardEvent) { // with type info
     if (event.key === "Enter") {
     this.addItem();
     }
+  
+    this.letter+=event.key.toString();
+    if(this.letter.length>4){
+      this.mess.message1="valid";
+    }
+    
+    console.log(this.letter);
   }
  
   addItem(){
