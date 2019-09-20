@@ -1,7 +1,10 @@
 <div class="container">
-
-    <div *ngFor="let item of itemService.recoveredItems" class="item">      
+<div class="top">
+    Count:{{numberOfItems}}
+</div>
+    <div *ngFor="let item of itemService.recoveredItems;let i = index" class="item">      
         <div class="details">
+           
             <span class="name">{{item.name}}</span>   
             <span class="desc">{{item.description}}</span>
         </div>

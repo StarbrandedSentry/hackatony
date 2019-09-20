@@ -13,13 +13,16 @@ import { ItemEditService } from '../shared/item-edit.service';
 export class ItemListComponent implements OnInit {
   retard: string = 'SUNSHINE';
   items: Item[];
+  numberOfItems:Number;
   constructor(public itemService: ItemsService, public ed: ItemEditService) { }
 
   ngOnInit() {
     this.itemService.getItems()
       .subscribe(items => {
         this.itemService.recoveredItems = items;
+        this.numberOfItems=this.itemService.recoveredItems.length;
     });
+ 
   }
   deleteItem(id:string){
     this.itemService.deleteItem(id);

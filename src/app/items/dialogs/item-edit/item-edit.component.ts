@@ -31,6 +31,8 @@ export class ItemEditComponent implements OnInit {
     }
     this.item.date_added = new Date();
     this.itemService.editItem(this.id,this.item.name,this.item.description);
+
+    
   }
 
 }
