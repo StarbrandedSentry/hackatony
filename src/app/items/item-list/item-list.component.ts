@@ -26,8 +26,10 @@ export class ItemListComponent implements OnInit {
     console.log(id);
   }
 
-  showEdit(){
-    this.ed.openEditDialog();
+  showEdit(id:string){
+    this.ed.openEditDialog(id);
+    console.log(id);
   }
+
 
 }

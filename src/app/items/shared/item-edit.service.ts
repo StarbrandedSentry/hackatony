@@ -9,11 +9,14 @@ export class ItemEditService {
 
   constructor(public dialog: MatDialog) { }
 
-  openEditDialog(){
+  openEditDialog(id:string){
     return this.dialog.open(ItemEditComponent, {
       height: '400px',
       width: '600px',
-      panelClass: 'edit-dialog'
+      panelClass: 'edit-dialog',
+      data:{
+        id:id
+      }
     });
   }
 }

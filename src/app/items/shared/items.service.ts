@@ -33,5 +33,8 @@ export class ItemsService {
   deleteItem(id:string){
     this.itemCollection.doc(id).delete();
   }
+  editItem(id:string,name:string,description:string){
+    this.itemCollection.doc(id).update({name:name,description:description});
+  }
 
 }

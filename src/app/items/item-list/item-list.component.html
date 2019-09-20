@@ -1,12 +1,12 @@
 <div class="container">
-<<<<<<< Updated upstream
+
     <div *ngFor="let item of itemService.recoveredItems" class="item">      
         <div class="details">
             <span class="name">{{item.name}}</span>   
             <span class="desc">{{item.description}}</span>
         </div>
         <div class="icons">
-            <i class="material-icons" (click)="showEdit()">
+            <i class="material-icons" (click)="showEdit(item.id)">
                 edit
             </i>      
             <i class="material-icons" (click)="deleteItem(item.id)">
