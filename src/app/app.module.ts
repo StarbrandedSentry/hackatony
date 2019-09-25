@@ -30,6 +30,7 @@ import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component
     HttpComponent,
     BurgerComponent,
     ItemEditComponent
+
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,

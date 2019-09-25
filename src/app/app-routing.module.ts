@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'items', pathMatch: 'full'}, 
   {path: 'items', component: ItemsComponent},
   {path: 'http', component: HttpComponent},
-  {path: 'burger', component: BurgerComponent}
+  {path: 'burger', component: BurgerComponent},
 ];
 
 @NgModule({

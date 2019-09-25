@@ -1,8 +1,14 @@
-<h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content>
-  <p>Enter data to be Edited?</p>
+<div class="header">
+  <h1>Edit Items</h1>
+  <i class="material-icons" (click)="closeDialog()">
+    close
+  </i>
+</div>
+
+<div mat-dialog-container> 
+  <span class="title">Name:</span>
   <input type="text" placeholder="Edit Name:" [(ngModel)]="item.name"> 
+  <span class="title">Description:</span>
   <input type="text" placeholder="Edit description:" [(ngModel)]="item.description"> 
   <button class="solid" (click)="editItem()">Edit</button>
-  <button class="solid" (click)="editItem()">Cancel</button>
 </div>

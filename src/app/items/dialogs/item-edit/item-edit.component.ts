@@ -1,7 +1,12 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import { Item } from '../../models/item.model';
 import { ItemsService} from '../../shared/items.service';
-import {MAT_DIALOG_DATA} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+
+export interface DialogData {
+  name: string;
+  description: string;
+}
 
 @Component({
   selector: 'app-item-edit',
@@ -18,7 +23,7 @@ export class ItemEditComponent implements OnInit {
   constructor(public itemService:ItemsService ,  @Inject(MAT_DIALOG_DATA) public data: any) {
     
    }
-
+  
   ngOnInit() {
     console.log("happiness");
     console.log(this.data);
@@ -31,8 +36,20 @@ export class ItemEditComponent implements OnInit {
     }
     this.item.date_added = new Date();
     this.itemService.editItem(this.id,this.item.name,this.item.description);
-
-    
   }
 
+}
+
+
+@Component({
+  selector: 'app-item-edit',
+  templateUrl: './item-edit.component.html'
+})
+export class DialogBodyComponent {
+  constructor( public dialogRef: MatDialogRef<DialogBodyComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData){}
+
+  closeDialog(){
+    this.dialogRef.close("sarado");
+  }
 }
