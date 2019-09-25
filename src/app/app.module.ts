@@ -21,6 +21,7 @@ import { ItemsService } from './items/shared/items.service';
 import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component';
 import { BurgerItemsComponent } from './burger/burger-items/burger-items.component';
 import { BurgerDescriptionsComponent } from './burger/burger-descriptions/burger-descriptions.component';
+import { BurgerNavComponent } from './layout/burger-nav/burger-nav.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BurgerDescriptionsComponent } from './burger/burger-descriptions/burger
     BurgerComponent,
     ItemEditComponent,
     BurgerItemsComponent,
-    BurgerDescriptionsComponent
+    BurgerDescriptionsComponent,
+    BurgerNavComponent
 
   ],
   imports: [
