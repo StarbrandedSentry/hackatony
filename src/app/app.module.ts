@@ -19,6 +19,8 @@ import { environment } from 'src/environments/environment.prod';
 
 import { ItemsService } from './items/shared/items.service';
 import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component';
+import { BurgerItemsComponent } from './burger/burger-items/burger-items.component';
+import { BurgerDescriptionsComponent } from './burger/burger-descriptions/burger-descriptions.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component
     ItemListComponent,
     HttpComponent,
     BurgerComponent,
-    ItemEditComponent
+    ItemEditComponent,
+    BurgerItemsComponent,
+    BurgerDescriptionsComponent
 
   ],
   imports: [
