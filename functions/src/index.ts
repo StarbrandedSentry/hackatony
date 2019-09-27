@@ -14,15 +14,15 @@ export const addDate = functions.region('asia-east2').firestore.document('item/{
 });
 
 export const powerNap = functions.region('asia-east2').https.onRequest((request, response) => {
-    let itemCount = 0;
-    admin.firestore().collection('item').get().then(snapshot => {
+    //let itemCount = 0;
+    /*admin.firestore().collection('item').get().then(snapshot => {
         itemCount = snapshot.size;
-    });
+    });*/
 
     const message = {
         message: 'bobo si dean',
         powerNap: '6 hours',
-        gaanoNaKadamiItemSaDatabaseNatin: itemCount
+        //gaanoNaKadamiItemSaDatabaseNatin: itemCount
     }
 
     response.send(message);

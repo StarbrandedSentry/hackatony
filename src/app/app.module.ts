@@ -22,6 +22,8 @@ import { ItemEditComponent } from './items/dialogs/item-edit/item-edit.component
 import { BurgerItemsComponent } from './burger/burger-items/burger-items.component';
 import { BurgerDescriptionsComponent } from './burger/burger-descriptions/burger-descriptions.component';
 import { BurgerNavComponent } from './layout/burger-nav/burger-nav.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+//import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { BurgerNavComponent } from './layout/burger-nav/burger-nav.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent],
