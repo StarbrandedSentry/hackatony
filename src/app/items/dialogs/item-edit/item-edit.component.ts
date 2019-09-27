@@ -20,7 +20,8 @@ export class ItemEditComponent implements OnInit {
     name: '',
     description: ''
   }
-  constructor(public itemService:ItemsService ,  @Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(public itemService:ItemsService ,  @Inject(MAT_DIALOG_DATA) public data: any, 
+  private dialogRef: MatDialogRef<ItemEditComponent>) {
     
    }
   
@@ -38,18 +39,10 @@ export class ItemEditComponent implements OnInit {
     this.itemService.editItem(this.id,this.item.name,this.item.description);
   }
 
-}
-
-
-@Component({
-  selector: 'app-item-edit',
-  templateUrl: './item-edit.component.html'
-})
-export class DialogBodyComponent {
-  constructor( public dialogRef: MatDialogRef<DialogBodyComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData){}
-
   closeDialog(){
-    this.dialogRef.close("sarado");
+    this.dialogRef.close();
   }
+
 }
+
+
